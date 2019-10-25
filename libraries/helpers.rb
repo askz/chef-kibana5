@@ -59,8 +59,10 @@ module Kibana
     def kibana_checksum_map
       {
         '7.4.1' => {
-          'x86_64' => {
-            'checksum' => 'b7ad6291b54c568bd6439bb73b64bcb2bd65132ad461764dcd8762d196e6f401',
+          'release' => {
+            'x86_64' => {
+              'checksum' => 'b7ad6291b54c568bd6439bb73b64bcb2bd65132ad461764dcd8762d196e6f401',
+            },
           },
         },
         '6.8.2' => {
