@@ -185,9 +185,9 @@ xpack.security.enabled: <%= @config['xpack.security.enabled'] %>
 <% end -%>
 
 # X-Pack Encryption Key
-<% if @config.key?('xpack.encryptedSavedObjects.encryptionKey') %>
+<% if @config.key?('xpack.security.encryptionKey') %>
 xpack.security.encryptionKey: <%= @config['xpack.security.encryptionKey'] %>
-xpack.encryptedSavedObjects.encryptionKey: <%= @config['xpack.encryptedSavedObjects.encryptionKey'] %>
+xpack.encryptedSavedObjects.encryptionKey: <%= @config['xpack.security.encryptionKey'] %>
 
 <% else -%>
 #xpack.encryptedSavedObjects.encryptionKey: ''
