@@ -180,6 +180,7 @@ elasticsearch.startupTimeout: <%= @config['elasticsearch.startupTimeout'] %>
 # privileges are disabled.
 <% if @config.key?('xpack.security.enabled') %>
 xpack.security.enabled: <%= @config['xpack.security.enabled'] %>
+xpack.ingestManager.fleet.tlsCheckDisabled: true
 <% else -%>
 #xpack.security.enabled: true
 <% end -%>
