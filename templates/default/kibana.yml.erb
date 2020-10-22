@@ -184,6 +184,13 @@ xpack.security.enabled: <%= @config['xpack.security.enabled'] %>
 #xpack.security.enabled: true
 <% end -%>
 
+# X-Pack Encryption Key
+<% if @config.key?(xpack.encryptedSavedObjects.encryptionKey') %>
+xpack.encryptedSavedObjects.encryptionKey: <%= @config['xpack.encryptedSavedObjects.encryptionKey'] %>
+<% else -%>
+#xpack.encryptedSavedObjects.encryptionKey: ''
+<% end -%>
+
 # Specifies the path where Kibana creates the process ID file.
 <% if @config.key?('pid.file') %>
 pid.file: <%= @config['pid.file'] %>
